@@ -1,0 +1,53 @@
+@import "../abstarct/variables";
+.memopool {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  &__container1 {
+    margin-left: 20px;
+
+    border-right: 1px solid black;
+    height: 710px;
+    &__header {
+      margin-top: 30px;
+      font-size: 30px;
+      color: $black;
+    }
+    &__ID {
+      color: blue;
+      padding-bottom: 30px;
+    }
+    &__activenodes {
+      padding-bottom: 10px;
+      color: $black;
+    }
+    &__userID {
+      font-size: 12px;
+    }
+  }
+  &__container2 {
+    border-right: 1px solid black;
+    height: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__header {
+      padding-left: 200px;
+    }
+    &__btn {
+      text-align: center;
+      border: 1px solid black;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+  }
+  &__container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    input {
+      border: 1px solid black;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+  }
+}

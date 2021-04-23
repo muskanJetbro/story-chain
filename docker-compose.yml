@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  story_chain:
+    tty: true
+    working_dir: /app
+    command: yarn dev
+    container_name: story_chain
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./storychain:/app"
+      - "/app/node_modules"
+    ports:
+      - "14215:3000"
+    networks:
+      - storychain
+networks:
+  storychain:
+    name: storychain

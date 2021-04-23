@@ -1,0 +1,58 @@
+@import "../styles/abstarct/variables", "../styles/abstarct/mixin";
+.home {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  margin-top: 200px;
+  &__header {
+    font-size: 68px;
+    color: $black;
+    grid-column: 2/3;
+    padding-left: 100px;
+  }
+  &__btn {
+    grid-column: 2/3;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &__content {
+      padding-left: 300px;
+      color: $black;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  &__input {
+    grid-column: 2/3;
+    display: flex;
+
+    input {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      border-bottom: 1px solid black;
+      padding-right: 200px;
+      display: flex;
+
+      @include placeholder {
+        font-family: $font-family;
+      }
+    }
+    &__btn {
+      border: 1px solid black;
+      border-radius: 8px;
+      &__content {
+        padding: 20px;
+      }
+    }
+  }
+}
+.home__footer {
+  margin-top: 100px;
+  margin-left: 600px;
+  &__link {
+    color: $blue;
+  }
+}
